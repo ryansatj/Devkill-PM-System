@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#121213">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="DevKill{}"
+        android:layout_marginBottom="10dp"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+    <Button
+        android:id="@+id/join_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_container_white"
+        android:fontFamily="monospace"
+        android:text="join us/>"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="or"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+    <Button
+        android:id="@+id/login_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_container_black"
+        android:fontFamily="monospace"
+        android:text="Login"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+
+
+
+</LinearLayout>

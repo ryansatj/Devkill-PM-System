@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityLiveRegion="none"
+    android:animateLayoutChanges="true"
+    android:animationCache="false"
+    android:background="#121213"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="add"
+    android:focusable="auto"
+    android:foregroundGravity="top"
+    android:gravity="top"
+    tools:context=".SignupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="DevKill{}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="36dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/rounded_container_black_outline"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/editUser_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_container_black"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="edit"
+                android:accessibilityLiveRegion="polite"
+                android:backgroundTint="#000000"
+                android:fontFamily="monospace"
+                android:paddingVertical="12dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:cornerRadius="21dp"
+                app:strokeColor="#000000" />
+
+            <TextView
+                android:id="@+id/initial"
+                android:layout_width="144dp"
+                android:layout_height="137dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="14dp"
+                android:background="@drawable/baseline_circle_24"
+                android:drawableTint="#0000"
+                android:gravity="center"
+                android:hint="P"
+                android:text="A"
+                android:textColor="@color/white"
+                android:textSize="48dp" />
+
+
+            <TextView
+                android:id="@+id/details_name"
+                style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#121213"
+                android:drawingCacheQuality="auto"
+                android:fontFamily="monospace"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/white" />
+
+            <TextView
+                android:id="@+id/details_username"
+                style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#121213"
+                android:drawingCacheQuality="auto"
+                android:fontFamily="monospace"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/white" />
+
+            <TextView
+                android:id="@+id/details_email"
+                style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#121213"
+                android:drawingCacheQuality="auto"
+                android:fontFamily="monospace"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/white" />
+
+            <Button
+                android:id="@+id/signout_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="90dp"
+                android:accessibilityLiveRegion="polite"
+                android:background="@drawable/rounded_container_black"
+                android:fontFamily="monospace"
+                android:insetLeft="100dp"
+                android:insetRight="100dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:text="Signout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:cornerRadius="21dp"
+                app:strokeColor="#000000" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_container_black"
+        app:menu="@menu/bottom_navbar_menu" />
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityLiveRegion="none"
+    android:animateLayoutChanges="true"
+    android:animationCache="false"
+    android:background="#121213"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="add"
+    android:focusable="auto"
+    android:foregroundGravity="top"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SignupActivity"> <!-- Add this line -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Add User to Project{}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/add_username"
+            style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="20dp"
+            android:background="#121213"
+            android:drawingCacheQuality="auto"
+            android:fontFamily="monospace"
+            android:hint="username"
+            android:textColorHint="@color/white"
+            android:inputType="textPersonName"
+            android:insetLeft="50dp"
+            android:insetRight="50dp"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        <TextView
+            android:id="@+id/error_addUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#B71C1C"/>
+
+
+        <Button
+            android:id="@+id/addUser_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:accessibilityLiveRegion="polite"
+            android:background="#000000"
+            android:backgroundTint="#000000"
+            android:fontFamily="monospace"
+            android:insetLeft="100dp"
+            android:insetRight="100dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="12dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:cornerRadius="21dp"
+            android:layout_marginBottom="10dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

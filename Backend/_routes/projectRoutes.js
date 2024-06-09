@@ -8,5 +8,6 @@ projectRouter.put("/edit", projectController.editProject);
 projectRouter.get("/getbyuser/:userid", projectController.getProjectbyUserId);
 projectRouter.post("/addUser/:repository", projectController.addUsertoProject);
 projectRouter.get("/getuser/:repository", projectController.getAllProjectuser);
+projectRouter.delete("/delete/:repository", projectController.deleteProject);
 
 module.exports = projectRouter;

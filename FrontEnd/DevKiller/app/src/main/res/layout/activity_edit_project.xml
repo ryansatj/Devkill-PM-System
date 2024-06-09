@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityLiveRegion="none"
+    android:animateLayoutChanges="true"
+    android:animationCache="false"
+    android:background="#121213"
+    android:backgroundTint="#000000"
+    android:backgroundTintMode="add"
+    android:focusable="auto"
+    android:foregroundGravity="top"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SignupActivity"> <!-- Add this line -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Edit your Project{}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:background="@drawable/rounded_container_white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_project_title"
+            style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_container_black"
+            android:drawingCacheQuality="auto"
+            android:fontFamily="monospace"
+            android:hint="Title"
+            android:inputType="textPersonName"
+            android:insetLeft="50dp"
+            android:insetRight="50dp"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/edit_project_desc"
+            style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_container_black"
+            android:drawingCacheQuality="auto"
+            android:fontFamily="monospace"
+            android:hint="Descriptions"
+            android:inputType="textPersonName"
+            android:insetLeft="50dp"
+            android:insetRight="50dp"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColorHint="@color/white" />
+        <TextView
+            android:id="@+id/error_user_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#B71C1C"/>
+
+        <Button
+            android:id="@+id/project_edit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_container_black_outline"
+            android:fontFamily="monospace"
+            android:insetLeft="100dp"
+            android:insetRight="100dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="12dp"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:cornerRadius="21dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -38,7 +38,7 @@ editProject = async(req, res) =>{
     try{
         const result = await pool.query(
             `UPDATE Projects SET 
-            title = $1, descriptions = $2 repository = $3 RETURNING *`,
+            title = $1, descriptions = $2 WHERE repository = $3 RETURNING *`,
             [title, descriptions, repository]
         );
         res.status(201).json(result.rows[0]);
@@ -144,6 +144,20 @@ getAllProjectuser = async(req, res) => {
     }
 }
 
+deleteProject = async(req, res) => {
+    const{repository} = req.params;
+    try{
+        const result = await pool.query(
+            `DELETE FROM Projects WHERE repository = $1 RETURNING *`,
+            [repository]
+        );
+        res.status(200).json(result.rows[0]);
+    } catch(err){
+        console.error(err);
+        res.status(500).send(err);
+    }
+}
+
 module.exports = {
     createProject,
     editProject,
@@ -151,4 +165,5 @@ module.exports = {
     getProjectbyUserId,
     addUsertoProject,
     getAllProjectuser,
+    deleteProject,
 }

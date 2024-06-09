@@ -16,4 +16,15 @@
         android:title="New Section"
         app:showAsAction="collapseActionView|always"
         />
+
+    <item android:id="@+id/edit_project"
+        android:icon="@drawable/baseline_edit_24"
+        android:title="Edit Project"
+        app:showAsAction="collapseActionView|always"
+        />
+    <item android:id="@+id/delete_project"
+        android:icon="@drawable/baseline_restore_from_trash_24"
+        android:title="Delete Project"
+        app:showAsAction="collapseActionView|always"
+        />
 </menu>

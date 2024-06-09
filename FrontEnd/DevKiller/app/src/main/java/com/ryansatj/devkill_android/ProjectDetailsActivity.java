@@ -100,6 +100,16 @@ public class ProjectDetailsActivity extends AppCompatActivity {
             moveActivity(this, UsersOnProjectActivity.class);
             return true;
         }
+        if(itemId == R.id.edit_project){
+            finish();
+            moveActivity(this, EditProjectActivity.class);
+            return true;
+        }
+        if(itemId == R.id.delete_project){
+            finish();
+            moveActivity(this, DeleteProjectActivity.class);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
     public void moveActivity(Context ctx, Class<?> cls){

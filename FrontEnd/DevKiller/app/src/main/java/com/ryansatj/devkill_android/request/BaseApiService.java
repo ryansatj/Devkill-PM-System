@@ -7,6 +7,7 @@ import com.ryansatj.devkill_android.model.User;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -79,5 +80,18 @@ public interface BaseApiService {
             @Field("username") String username,
             @Field("name") String name,
             @Field("email") String email
+    );
+
+    @FormUrlEncoded
+    @PUT("project/edit")
+    Call<Project> editProject(
+            @Field("repository") String repository,
+            @Field("title") String title,
+            @Field("descriptions") String descriptions
+    );
+
+    @DELETE("project/delete/{repository}")
+    Call<Project> deleteProject(
+            @Path("repository") String repository
     );
 }

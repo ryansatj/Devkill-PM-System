@@ -133,7 +133,6 @@ function md5Hash(text) {
 module.exports = {
     signUp,
     login,
-    deleteUser,
     findUserbyUsername,
     findUserbyId,
     updateUser

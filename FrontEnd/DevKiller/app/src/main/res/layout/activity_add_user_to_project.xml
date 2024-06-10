@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="36dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_container_white"
         android:orientation="vertical">
         <EditText
             android:id="@+id/add_username"
@@ -47,7 +47,7 @@
             android:layout_marginTop="35dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="20dp"
-            android:background="#121213"
+            android:background="@drawable/rounded_container_black"
             android:drawingCacheQuality="auto"
             android:fontFamily="monospace"
             android:hint="username"
@@ -78,7 +78,7 @@
             android:layout_marginLeft="75dp"
             android:layout_marginRight="75dp"
             android:accessibilityLiveRegion="polite"
-            android:background="#000000"
+            android:background="@drawable/rounded_container_black"
             android:backgroundTint="#000000"
             android:fontFamily="monospace"
             android:insetLeft="100dp"

@@ -4,7 +4,6 @@ const userRouter = express.Router();
 
 userRouter.post("/signup", userController.signUp);
 userRouter.post("/login", userController.login);
-userRouter.put("/edit", userController.deleteUser);
 userRouter.get("/find/:username", userController.findUserbyUsername);
 userRouter.put("/update/:id", userController.updateUser);
 

@@ -58,25 +58,6 @@ login = async(req, res) =>{
     }
 }
 
-deleteUser = async(req, res) =>{
-    const{_id} = req.body;
-    try{
-        const result = await pool.query(
-            `SELECT * FROM USERS WHERE _id = $1`,
-            [_id]
-        );
-
-        const deleted = await pool.query(
-            `DELETE FROM USERS WHERE _id = $1`,
-            [_id]
-        );
-        res.status(201).json(result.rows[0]);
-    }catch(err){
-        console.error(err);
-        res.status(500).json(err);
-    }
-}
-
 findUserbyUsername = async(req, res) =>{
     const{username} = req.params;
     try{

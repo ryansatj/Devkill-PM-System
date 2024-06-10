@@ -19,6 +19,37 @@ Backend pada sistem ini menggunakan express.js sebagai pengendali utama dari pro
 - Retrofit : 2.9.0
 - Java version : 8.11
 
+### API Documentation
+
+#### Main routes
+- /project
+- /account
+- /section
+
+##### Sub Routes
+
+/project:
+- /create/:userid : create Project
+- /get : get all projects
+- /edit : edit a project
+- /getbyuser/:userid : get project by userid
+- /addUser/:repository : add project members to project
+- /getuser/:repository : get all project members
+- /delete/:repository : delete a project
+
+/account: 
+- /signup : create an account
+- /login : verificate an account
+- /find/:username : find user by username
+- /update/:id : update/edit an account
+
+/section:
+- /create/:projectrepo : make a section on a project
+- /getall/:projectrepo : get all section on a project
+- /delete/:projectrepo : delete a section
+- /edit/:projectrepo : edit a section
+
+
 ### Database Relation
 ![DevKill Diagram](https://github.com/ryansatj/Devkill-PM-System/assets/134668057/60e025ec-b387-4f2f-ae38-a24f66552bb0)
 

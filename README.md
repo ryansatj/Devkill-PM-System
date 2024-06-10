@@ -8,6 +8,8 @@ Devkill PM system adalah aplikasi berbasis android yang befungsi sebagai control
 
 Backend pada sistem ini menggunakan express.js sebagai pengendali utama dari program, dengan database yang dideploy pada cloud NeonDB. Backend pada program ini memiliki beberapa fungsi diantaranya yaitu, sebagai controller utama request yang masuk, dan sebagai rute untuk request API yang masuk.
 
+#### Deployed Backend server : https://devkill-pm-system.vercel.app/
+
 ### Program Version
 
 - Express : 4.19.2

@@ -71,7 +71,7 @@ Frontend pada Aplikasi ini terdiri dari beberapa komponen utama yaitu, landing P
 
 ### Steps
 
-1. Fork the repository.
+1. Clone the repository.
 2. Install prequisites on Server (npm install).
 3. Run the server (npm run start).
 4. Run the client side (Android)

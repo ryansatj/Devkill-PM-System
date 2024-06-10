@@ -19,9 +19,17 @@ Backend pada sistem ini menggunakan express.js sebagai pengendali utama dari pro
 - Retrofit : 2.9.0
 - Java version : 8.11
 
+### Database Relation
+![DevKill Diagram](https://github.com/ryansatj/Devkill-PM-System/assets/134668057/60e025ec-b387-4f2f-ae38-a24f66552bb0)
+
+
 ## Frontend
 
 Frontend pada Aplikasi ini terdiri dari beberapa komponen utama yaitu, landing Page, login Page, Signup Page, Home Page, Project Page, Section Page, User Page, dan Page untuk menambah Project maupun session, juga dilengkapi dengan fitur fitur untuk menghapus ataupun mengedit suatu objek.
+
+### Frontend Flowchart
+![Flowcharts (1)](https://github.com/ryansatj/Devkill-PM-System/assets/134668057/0083ef0e-de0b-4676-b469-9dc11e0c3b00)
+
 
 ## Instalation
 

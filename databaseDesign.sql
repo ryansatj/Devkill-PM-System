@@ -1,7 +1,5 @@
-DROP TABLE Roles;
 DROP TABLE Section_members;
 DROP TABLE Project_members;
-DROP TABLE BaseSection;
 DROP TABLE Sections;
 DROP TABLE Projects;
 DROP TABLE Users;
@@ -25,16 +23,6 @@ CREATE TABLE Projects (
   FOREIGN KEY (userId) REFERENCES Users(id)
 );
 
-CREATE TABLE BaseSection(
-  id SERIAL NOT NULL,
-  userId INTEGER NOT NULL,
-  title varchar(50) NOT NULL,
-  description text,
-  resources text,
-  PRIMARY KEY(id, userId),
-  FOREIGN KEY (userId) REFERENCES Users(id) 
-);
-
 CREATE TABLE Sections (
   id SERIAL,
   projectrepo varchar,
@@ -54,20 +42,10 @@ CREATE TABLE Project_members (
 );
 
 CREATE TABLE Section_members (
-  sectionId INT NOT NULL,
+  section_member_id SERIAL PRIMARY KEY,
+  userId INT NOT NULL,
   projectRepo varchar NOT NULL,
   sectionTitle varchar NOT NULL,
-  FOREIGN KEY (sectionId) REFERENCES Sections(id)
+  FOREIGN KEY (userId) REFERENCES Users(id)
 );
-
-
-CREATE TABLE Roles (
-  id SERIAL UNIQUE PRIMARY KEY,
-  userId INT NOT NULL,
-  role roles_enum NOT NULL,
-  FOREIGN KEY (userId) REFERENCES Users(_id)
-);
-
-
-CREATE TYPE roles_enum AS ENUM('ADMIN', 'PROJECT_MANAGER', 'MEMBER', 'VIEW_ONLY');
 

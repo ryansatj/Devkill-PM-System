@@ -1,35 +1,6 @@
 const Section = require("../_models/section.js");
 const pool = require("./_pool.js");
 
-createBaseSection = async(req, res) =>{
-    const{title, description, resources} = req.body
-    try{
-        const result = await pool.query(
-            `INSERT INTO BaseSection (title, description, resources) 
-            VALUES($1, $2, $3) RETURNING *`,
-            [title, description, resources]
-        );
-        res.status(201).json(result.rows[0]);
-    }catch(err){
-        console.error(err);
-        res.status(500).send(err);
-    }
-}
-
-editBaseSection = async(req, res) =>{
-    const{id, title, description, resources} = req.body
-    try{
-        const result = await pool.query(
-            `UPDATE BaseSection SET title = $1, description = $2, resources = $3 WHERE id = $4 RETURNING *`,
-            [title, description, resources, id]
-        );
-        res.status(201).json(result.rows[0]);
-    }catch(err){
-        console.error(err);
-        res.status(500).send(err);
-    }
-}
-
 createSection = async(req, res) =>{
     const{projectrepo} = req.params;
     const{title, description, deadline, resources, alerts} = req.body
@@ -117,8 +88,6 @@ sectionDelete = async(req, res) => {
 }
 
 module.exports = {
-    createBaseSection,
-    editBaseSection,
     createSection,
     getProjectSection,
     sectionDelete,

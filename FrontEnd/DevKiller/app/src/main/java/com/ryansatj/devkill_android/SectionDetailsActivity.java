@@ -65,6 +65,10 @@ public class SectionDetailsActivity extends AppCompatActivity {
             showDeleteConfirmationDialog();
             return true;
         }
+        if (itemId == R.id.edit_section) {
+            moveActivity(mContext, EditSectionActivity.class);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

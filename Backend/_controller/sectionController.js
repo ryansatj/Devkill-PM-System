@@ -87,8 +87,24 @@ sectionDelete = async(req, res) => {
     }
 }
 
+editSection = async(req, res) =>{
+    const{projectrepo} = req.params;
+    const{title, description, deadline, resources, alerts} = req.body
+    try{
+        const result = await pool.query(
+            `UPDATE SECTIONS SET description = $2, deadline = $3, resources = $4, alerts = $5 WHERE projectrepo = $6 and title = $1 RETURNING *`,
+            [title, description, deadline, resources, alerts, projectrepo]
+        )
+        res.status(201).json(result.rows[0]);
+    } catch(err){
+        console.error(err);
+        res.status(500).send(err);
+    }
+}
+
 module.exports = {
     createSection,
     getProjectSection,
     sectionDelete,
+    editSection,
 }

@@ -7,4 +7,9 @@
         android:title="Delete Section"
         app:showAsAction="collapseActionView|always"
         />
+    <item android:id="@+id/edit_section"
+        android:icon="@drawable/baseline_edit_24"
+        android:title="Edit Section"
+        app:showAsAction="collapseActionView|always"
+        />
 </menu>

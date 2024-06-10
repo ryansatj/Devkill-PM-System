@@ -101,4 +101,15 @@ public interface BaseApiService {
             @Path("projectrepo") String projectrepo,
             @Field("title") String title
     );
+
+    @FormUrlEncoded
+    @PUT("section/edit/{projectrepo}")
+    Call<Section> editSection(
+            @Path("projectrepo") String projectrepo,
+            @Field("title") String title,
+            @Field("description") String description,
+            @Field("deadline") String deadline,
+            @Field("resources") String resources,
+            @Field("alerts") String alerts
+    );
 }

@@ -75,15 +75,12 @@ Frontend pada Aplikasi ini terdiri dari beberapa komponen utama yaitu, landing P
 
 ### Prerequisites
 
-- Node.js (version 14) for Server
 - Android Version 7 or higher
 
 ### Steps
 
-1. Clone the repository.
-2. Install prequisites on Server (npm install).
-3. Run the server (npm run start).
-4. Run the client side (Android)
+1. Install the client side App (Android)
+2. Enjoy my app
 
 ## Author
 

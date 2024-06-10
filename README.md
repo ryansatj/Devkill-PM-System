@@ -22,3 +22,26 @@ Backend pada sistem ini menggunakan express.js sebagai pengendali utama dari pro
 ## Frontend
 
 Frontend pada Aplikasi ini terdiri dari beberapa komponen utama yaitu, landing Page, login Page, Signup Page, Home Page, Project Page, Section Page, User Page, dan Page untuk menambah Project maupun session, juga dilengkapi dengan fitur fitur untuk menghapus ataupun mengedit suatu objek.
+
+## Instalation
+
+### Prerequisites
+
+- Node.js (version 14) for Server
+- Android Version 7 or higher
+
+### Steps
+
+1. Fork the repository.
+2. Install prequisites on Server (npm install).
+3. Run the server (npm run start).
+4. Run the client side (Android)
+
+## Author
+
+Ryan Safa Tjendana (Undergraduate Student in Computer Engineering Universitas Indonesia)
+
+## Acknowledgements
+- Express.js
+- NeonDB
+- Retrofit

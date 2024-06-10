@@ -17,7 +17,7 @@
             android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/rounded_container_white_outline"
+            android:background="@drawable/rounded_container_white"
             android:layout_margin="8dp"
             android:gravity="center"
             android:orientation="horizontal">
@@ -31,7 +31,7 @@
                 android:backgroundTint="#994909D8"
                 android:text="Project"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:visibility="visible"

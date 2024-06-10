@@ -41,7 +41,7 @@ public class SectionListAdapter extends ArrayAdapter<Section> {
             textView2.setText("Deadline: " + section.deadline.substring(0,10));
             textView1.setOnClickListener(v -> {
                 selectedSection = getItem(position);
-                Intent intent = new Intent(mContext, ProjectDetailsActivity.class);
+                Intent intent = new Intent(mContext, SectionDetailsActivity.class);
                 mContext.startActivity(intent);
             });
         }

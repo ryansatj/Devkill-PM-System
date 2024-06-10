@@ -34,6 +34,15 @@ createSection = async(req, res) =>{
     const{projectrepo} = req.params;
     const{title, description, deadline, resources, alerts} = req.body
     try{
+        const titleExist = await pool.query(
+            `SELECT * FROM Sections WHERE title = $1`,
+            [title]
+        );
+        if(titleExist.rows.length > 0){
+            const section = new Section(-1, "error", "error", "error" , "error", "error",);
+            return res.status(200).send(section);
+        }
+
         const result = await pool.query(
             `INSERT INTO SECTIONS (projectrepo, title, description, deadline, resources, alerts)
             VALUES($1, $2, $3, $4, $5, $6) RETURNING *`,
@@ -92,9 +101,25 @@ addUsertoSection = async(req, res) =>{
     }
 }
 
+sectionDelete = async(req, res) => {
+    const{projectrepo} = req.params;
+    const{title} = req.body;
+    try{
+        const result = await pool.query(
+            `DELETE FROM Sections WHERE projectrepo = $1 AND title = $2 RETURNING *`,
+            [projectrepo, title]
+        );
+        res.status(200).send(result.rows[0]);
+    } catch(err){
+        console.error(err);
+        res.status(500).send(err);
+    }
+}
+
 module.exports = {
     createBaseSection,
     editBaseSection,
     createSection,
     getProjectSection,
+    sectionDelete,
 }

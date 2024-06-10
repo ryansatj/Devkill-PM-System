@@ -48,7 +48,6 @@ public class DeleteProjectActivity extends AppCompatActivity {
         });
     }
     protected void handleDeleteProject(String repository) {
-
         mApiService.deleteProject(repository).enqueue(new Callback<Project>(){
             @Override
             public void onResponse(Call<Project> call, Response<Project> response) {

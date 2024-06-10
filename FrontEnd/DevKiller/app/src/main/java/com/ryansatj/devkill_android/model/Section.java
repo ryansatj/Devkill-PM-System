@@ -8,14 +8,14 @@ import java.util.TimeZone;
 public class Section {
 
     public int id;
-    public int projectid;
+    public String projectrepo;
     public String title;
-    public String descriptions;
+    public String description;
     public String deadline;
     public String resources;
     public String alerts;
 
-    public Section(int id, int projectid, String title, String descriptions,
+    public Section(int id, String projectrepo, String title, String description,
                    String deadline, String resources, String alerts) {
         if (deadline != null && deadline.length() >= 10) {
             this.deadline = deadline.substring(0, 10);
@@ -24,18 +24,10 @@ public class Section {
         }
 
         this.id = id;
-        this.projectid = projectid;
+        this.projectrepo = projectrepo;
         this.title = title;
-        this.descriptions = descriptions;
+        this.description = description;
         this.resources = resources;
         this.alerts = alerts;
-    }
-
-    // Getters and setters can be added here if needed
-
-    public static void main(String[] args) {
-        Section section = new Section(1, 1, "Title", "Descriptions",
-                "2025-10-10T17:00:00.000Z", "Resources", "Alerts");
-        System.out.println("Section deadline: " + section.deadline);  // Output: 2025-10-10
     }
 }

@@ -55,7 +55,8 @@ CREATE TABLE Project_members (
 
 CREATE TABLE Section_members (
   sectionId INT NOT NULL,
-  projectrepo varchar NOT NULL,
+  projectRepo varchar NOT NULL,
+  sectionTitle varchar NOT NULL,
   FOREIGN KEY (sectionId) REFERENCES Sections(id)
 );
 

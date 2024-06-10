@@ -19,7 +19,7 @@
     tools:context=".SignupActivity"> <!-- Add this line -->
 
     <TextView
-        android:id="@+id/project_title"
+        android:id="@+id/section_title"
         style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:textColorHint="@color/white" />
 
     <TextView
-        android:id="@+id/project_repo"
+        android:id="@+id/section_deadline"
         style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_marginBottom="10dp"
         android:drawingCacheQuality="auto"
         android:fontFamily="monospace"
-        android:hint="Repository"
+        android:hint="Deadline:"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:textAlignment="viewStart"
@@ -56,7 +56,7 @@
         android:textColorHint="@color/white" />
 
     <TextView
-        android:id="@+id/project_descriptions"
+        android:id="@+id/section_description"
         style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
         android:textColorHint="@color/black" />
 
     <TextView
-        android:id="@+id/Section"
+        android:id="@+id/section_alerts"
         style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
         android:layout_marginEnd="20dp"
         android:drawingCacheQuality="auto"
         android:fontFamily="monospace"
-        android:text="Project Sections:"
+        android:text="Alerts:"
         android:textSize="15dp"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -90,13 +90,21 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColorHint="@color/white" />
 
-    <ListView
-        android:id="@+id/sections_view"
+    <TextView
+        android:id="@+id/section_res"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:divider="@drawable/divider"
-        android:dividerHeight="3dp"/>
+        android:drawingCacheQuality="auto"
+        android:fontFamily="monospace"
+        android:text="Resources:"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColorHint="@color/white" />
 </LinearLayout>

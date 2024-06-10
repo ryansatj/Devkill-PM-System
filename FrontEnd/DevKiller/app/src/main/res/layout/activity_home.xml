@@ -52,7 +52,9 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_marginBottom="50dp"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="50dp"
+            android:divider="@drawable/divider"
+            android:dividerHeight="3dp"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

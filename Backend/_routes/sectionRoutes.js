@@ -6,5 +6,6 @@ sectionRouter.post("/basesection", sectionController.createBaseSection);
 sectionRouter.put("/basesection", sectionController.editBaseSection);
 sectionRouter.post("/create/:projectrepo", sectionController.createSection);
 sectionRouter.get("/getall/:projectrepo", sectionController.getProjectSection);
+sectionRouter.post("/delete/:projectrepo", sectionController.sectionDelete)
 
 module.exports = sectionRouter

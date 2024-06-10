@@ -94,4 +94,11 @@ public interface BaseApiService {
     Call<Project> deleteProject(
             @Path("repository") String repository
     );
+
+    @FormUrlEncoded
+    @POST("section/delete/{projectrepo}")
+    Call<Section> deleteSection(
+            @Path("projectrepo") String projectrepo,
+            @Field("title") String title
+    );
 }

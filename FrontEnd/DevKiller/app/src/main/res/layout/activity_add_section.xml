@@ -53,24 +53,32 @@
             android:id="@+id/addSection_title"
             style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="35dp"
             android:layout_marginEnd="50dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
             android:background="#121213"
             android:drawingCacheQuality="auto"
             android:fontFamily="monospace"
             android:hint="Title"
-            android:textColorHint="@color/white"
             android:inputType="textPersonName"
             android:insetLeft="50dp"
             android:insetRight="50dp"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColorHint="@color/white" />
+        <TextView
+            android:id="@+id/error_sectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textColor="#B71C1C"/>
 
         <EditText
             android:id="@+id/addSection_deadline"
@@ -138,9 +146,18 @@
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-        <EditText
-            android:id="@+id/addSection_alerts"
-            style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+        <TextView
+            android:id="@+id/texta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Priority:"
+            android:textSize="15sp"
+            android:fontFamily="monospace"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textColor="#B71C1C"/>
+        <Spinner
+            android:id="@+id/priority"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginStart="50dp"
@@ -149,16 +166,11 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:background="#121213"
-            android:drawingCacheQuality="auto"
             android:fontFamily="monospace"
-            android:hint="alerts"
+            android:hint="priority"
             android:textColorHint="@color/white"
-            android:inputType="textPersonName"
             android:insetLeft="50dp"
-            android:insetRight="50dp"
-            android:textAlignment="viewStart"
-            android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:insetRight="50dp" />
 
         <Button
             android:id="@+id/addSection_button"
@@ -182,6 +194,11 @@
             android:textSize="16sp"
             android:visibility="visible"
             app:cornerRadius="21dp" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </LinearLayout>

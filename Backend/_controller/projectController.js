@@ -151,6 +151,14 @@ deleteProject = async(req, res) => {
             `DELETE FROM Projects WHERE repository = $1 RETURNING *`,
             [repository]
         );
+        const deleteUsers = await pool.query(
+            `DELETE FROM Project_members WHERE repository = $1`,
+            [repository]
+        );
+        const deleteSections = await pool.query(
+            `DELETE FROM Sections WHERE projectrepo = $1`,
+            [repository]
+        );
         res.status(200).json(result.rows[0]);
     } catch(err){
         console.error(err);

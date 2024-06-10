@@ -1,11 +1,14 @@
 package com.ryansatj.devkill_android;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -64,10 +67,7 @@ public class UserActivity extends AppCompatActivity {
         usernameTextview.setText(username);
         initialTextview.setText(initial);
 
-        signoutButton.setOnClickListener(v->{
-            extractor.deleteCookies(sharedPreferences);
-            moveActivity(mContext, LoginActivity.class);
-        });
+        signoutButton.setOnClickListener(v -> showLogoutConfirmationDialog(extractor, sharedPreferences));
 
         Button edit = findViewById(R.id.editUser_button);
         edit.setOnClickListener(v -> {
@@ -75,9 +75,40 @@ public class UserActivity extends AppCompatActivity {
         });
     }
 
+    private void showLogoutConfirmationDialog(CookiesExtractor extractor, SharedPreferences sharedPreferences) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_logout, null);
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+
+        Button btnCancel = dialogView.findViewById(R.id.btn_cancel);
+        Button btnLogout = dialogView.findViewById(R.id.btn_logout);
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle logout action
+                extractor.deleteCookies(sharedPreferences);
+                dialog.dismiss();
+                moveActivity(UserActivity.this, LoginActivity.class);
+                finish(); // Close the activity
+            }
+        });
+
+        dialog.show();
+    }
+
     public void moveActivity(Context ctx, Class<?> cls) {
         Intent intent = new Intent(ctx, cls);
         startActivity(intent);
     }
-
 }

@@ -40,11 +40,13 @@ public class ProjectDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_project_details);
         mContext = this;
         mApiService = UtilsApi.getApiService(mContext);
-        TextView title, descriptions;
+        TextView title, descriptions, repository;
         title = findViewById(R.id.project_title);
+        repository = findViewById(R.id.project_repo);
         descriptions = findViewById(R.id.project_descriptions);
         title.setText(ProjectListAdapter.selectedProject.title);
         descriptions.setText(ProjectListAdapter.selectedProject.descriptions);
+        repository.setText("repository : " + ProjectListAdapter.selectedProject.repository);
         handleAllSections(ProjectListAdapter.selectedProject.repository);
     }
 
